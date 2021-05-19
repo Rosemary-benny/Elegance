@@ -15,15 +15,16 @@ class MyApp extends StatelessWidget {
           toolbarHeight: 70,
           backgroundColor: Colors.grey[200],
           elevation: 0,
-          leading: Image.asset("assets/images/menu.png",height: 30),
+          leading: 
+           Icon(Icons.menu, color: Colors.black ,size: 40.0),
+          //Image.asset("assets/images/menu.png",height: 30,width: 30),
           actions: [
             Container(
             decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.circle,
             ),
-            child: Image.asset("assets/images/loupe.png"
-            ,height: 0),
+            child: Icon(Icons.search, color: Colors.black, size: 40.0),
             margin: EdgeInsets.all(10),
             
             ),
