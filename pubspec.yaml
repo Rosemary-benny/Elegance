@@ -49,6 +49,10 @@ flutter:
   assets:
    - assets/images/menu.png
    - assets/images/loupe.png
+   - assets/images/top1.jpg
+   - assets/images/top2.jpg
+   - assets/images/top3.jpg
+   - assets/images/top4.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
