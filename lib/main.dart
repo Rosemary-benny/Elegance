@@ -14,6 +14,15 @@ class MyApp extends StatelessWidget {
           automaticallyImplyLeading: false,
           title: Image.asset("assets/images/logo.png",fit: BoxFit.cover,height: 50),
           backgroundColor:Color(0xffffffff),
+          leading: Image.asset("assets/images/set.png"),
+          actions: [
+            Container(
+              child: Image.asset("assets/images/search.png"),
+            ),
+            Container(
+              child: Image.asset("assets/images/useset.png"),
+            ),
+          ],
         ),
       ),
     );
