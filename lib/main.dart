@@ -10,7 +10,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.grey[200],
+        bottomNavigationBar: Container(
+          height: 70,
+          color: Colors.white,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              buildContainerBottomNav(Icons.person),
+              buildContainerBottomNav(Icons.shopping_bag),
+              buildContainerBottomNav(Icons.home,isSelected: true),
+              buildContainerBottomNav(Icons.favorite),
+              buildContainerBottomNav(Icons.settings),
+            ],
+          ),),
         appBar: AppBar(
           toolbarHeight: 70,
           backgroundColor: Colors.grey[200],
@@ -30,120 +44,135 @@ class MyApp extends StatelessWidget {
             ),
           ],
       ),
-      body:Column(
-        children: [
-          Row(
-            children: [
-              SizedBox(
-                width: 15,
-              ),
-              Text(
-                "ELEGANCE",
-                style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
-             ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              buildFlatButton("Women",isSelect:true),
-              buildFlatButton("Men"),
-              buildFlatButton("Kids"),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Expanded(
-            child: 
-          Container(
-            decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(40),
+      body: Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  "ELEGANCE",
+                  style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+               ),
+              ],
             ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              spreadRadius: 1,
-              blurRadius: 20,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                buildFlatButton("Women",isSelect:true),
+                buildFlatButton("Men"),
+                buildFlatButton("Kids"),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Expanded(
+              child: 
+            Container(
+              decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(40),
+              ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                spreadRadius: 1,
+                blurRadius: 20,
 
-            )
-          ]  
-          ),
-                 child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        buildColumnAtTop("Tops", isSelected: true),
-                        buildColumnAtTop("Kurthis"),
-                        buildColumnAtTop("Ethinic"),
-                        buildColumnAtTop("Jeans"),
-                        buildColumnAtTop("Casual"),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    SingleChildScrollView(
-                      physics: BouncingScrollPhysics(),
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                  
+              )
+            ]  
+            ),
+                   child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          SizedBox(width: 20),
-                          buildColumnWithRow("1","Harpa","29"),
-                          buildColumnWithRow("2","Trends","23"),
-                          buildColumnWithRow("3","Max","40"),
-                          buildColumnWithRow("4","H&M","60"),
+                          buildColumnAtTop("Tops", isSelected: true),
+                          buildColumnAtTop("Kurthis"),
+                          buildColumnAtTop("Ethinic"),
+                          buildColumnAtTop("Jeans"),
+                          buildColumnAtTop("Casual"),
                         ],
                       ),
-                    ),
-                    SizedBox(height: 20,),
-                    LineBar(),
-                    Padding(
-                      padding: const EdgeInsets.all(30.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      SizedBox(
+                        height: 20,
+                      ),
+                      SingleChildScrollView(
+                        physics: BouncingScrollPhysics(),
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                    
+                          children: [
+                            SizedBox(width: 20),
+                            buildColumnWithRow("1","Harpa","29"),
+                            buildColumnWithRow("2","Trends","23"),
+                            buildColumnWithRow("3","Max","40"),
+                            buildColumnWithRow("4","H&M","60"),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 20,),
+                      LineBar(),
+                      Padding(
+                        padding: const EdgeInsets.all(30.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-                      children: [
-                        Text(
-                          "Summer Wear",
-                          style: TextStyle(fontSize: 24),
-                        ),
-                        Text(
-                          "View All",
-                style: TextStyle(fontSize: 20, color: Colors.grey),
-                        ),
-                        ],
-                    ),
-                    ),
-                    SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              buildbottomContainer(),
-              buildbottomContainer(),
-              buildbottomContainer(),
-              buildbottomContainer(),
-            ],
+                        children: [
+                          Text(
+                            "Summer Wear",
+                            style: TextStyle(fontSize: 24),
+                          ),
+                          Text(
+                            "View All",
+                  style: TextStyle(fontSize: 20, color: Colors.grey),
+                          ),
+                          ],
+                      ),
+                      ),
+                      Expanded(
+                        child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                buildbottomContainer("1","Off Shoulders","20","15"),
+                buildbottomContainer("2","Wrangler Dress","25","20"),
+                buildbottomContainer("3","Plain White","24","18"),
+                buildbottomContainer("4","Trendy Top","18","14"),
+              ],
+            ),
           ),
-        )
-      ],
-                 ),
-          ),
-          )
+                      )
         ],
+                   ),
+            ),
+            )
+          ],
+        ),
       ),
-      ),
+      
     );
   }
 
-    Container buildbottomContainer() {
+  Container buildContainerBottomNav(IconData icon,{isSelected=false}) {
+    return Container(
+              decoration: BoxDecoration(
+                color:isSelected ?Colors.pink[100]:Colors.white,
+                shape: BoxShape.circle,
+              ),
+              height: 50,
+              width: 50,
+              child: Icon(icon,color: isSelected?Colors.white:Colors.black,),
+            );
+  }
+
+    Container buildbottomContainer(String imge,String title1,String price1,String price2) {
     return Container(
       height: 150,
       width: 230,
@@ -156,7 +185,7 @@ class MyApp extends StatelessWidget {
                   height: 120,
                   width: 100,
                   child: Image.asset(
-                    "assets/images/top4.jpg",
+                    "assets/images/k$imge.jpg",
                     fit: BoxFit.cover,
                   ))),
           Padding(
@@ -164,14 +193,14 @@ class MyApp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("H&M Jacket"),
+                Text(title1),
                 Text(
-                  "16 oz",
+                  "\$ $price1" ,
                   style: TextStyle(color: Colors.grey, fontSize: 18),
                 ),
                 Spacer(),
                 Text(
-                  "\$ 28",
+                  "\$ $price2",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600,
