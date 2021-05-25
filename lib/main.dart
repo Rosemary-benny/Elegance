@@ -147,7 +147,10 @@ class MyApp extends StatelessWidget {
                                 "2", "Wrangler Dress", "25", "20"),
                             buildbottomContainer(
                                 "3", "Plain White", "24", "18"),
-                            buildbottomContainer("4", "Trendy Top", "18", "14"),
+                            buildbottomContainer("4", "Trendy T-shirt", "18", "14"),
+                            buildbottomContainer("5", "Pastel Skirt", "28", "24"),
+                            buildbottomContainer("6", "Beach Wear", "25", "17"),
+                            buildbottomContainer("7", "Pink top", "23", "15"),
                           ],
                         ),
                       ),
@@ -243,6 +246,9 @@ class MyDressList extends StatelessWidget {
           buildColumnWithRow("2", "Trends", "23",context),
           buildColumnWithRow("3", "Max", "40",context),
           buildColumnWithRow("4", "H&M", "60",context),
+          buildColumnWithRow("5", "EWF", "30",context),
+           buildColumnWithRow("6", "W", "26",context),
+            buildColumnWithRow("7", "Fab", "33",context),
         ],
       ),
     );
