@@ -160,7 +160,7 @@ class _RegisterState extends State<Register> {
         context: context,
         builder: (c) {
           return LoadingAlertDialog(
-            message: "'Authenticating, Please wait.....'",
+            message: "'Registering, Please wait.....'",
           );
         });
     String imageFileName = DateTime.now().microsecondsSinceEpoch.toString();
@@ -209,6 +209,7 @@ class _RegisterState extends State<Register> {
       "email": fUser.email,
       "name": _nameTextEditingController.text.trim(),
       "url": userImageUrl,
+     Elegance.userCartList: ["garbageValue"],
     });
     await Elegance.sharedPreferences.setString("uid", fUser.uid);
     await Elegance.sharedPreferences.setString(Elegance.userEmail, fUser.email);
