@@ -1,16 +1,20 @@
-# elegance
+# Elegance
+![Elegance](https://drive.google.com/file/d/1KqmnMaDCL-obeNi5pW_anQrRay8-ToIB/view?usp=sharing)
 
-A new Flutter project.
+The complete fashion store.
 
-## Getting Started
+## Team Id
+BFH/recko3d0wDGXte1pB/2021
 
-This project is a starting point for a Flutter application.
+## Team Membeers
+1.[Neha Susan Manoj](https://github.com/neha771)
+2.[Rosemary Benny](https://github.com/Rosemary-benny)
 
-A few resources to get you started if this is your first Flutter project:
+## Link to product walkthrough
+[link to video](https://drive.google.com/file/d/1NXZwj5VQjNQvZsEdovGKIeLMA3yvdHBL/view?usp=sharing)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Technologies used
+1. Flutter
+2. Firebase
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
