@@ -1,5 +1,4 @@
 # Elegance
-[Elegance](https://drive.google.com/file/d/1KqmnMaDCL-obeNi5pW_anQrRay8-ToIB/view?usp=sharing)
 
 The complete fashion store.
 
