@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "428461641767",
+    "project_id": "elegance-8c99c",
+    "storage_bucket": "elegance-8c99c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428461641767:android:67a7d596d3bfb21ea5be02",
+        "android_client_info": {
+          "package_name": "com.rose.elegance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428461641767-gi7usgjvd7anritgup8il51nqfd3s8pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtUPuh0d9d78IClrLySzRB7KoNvrLsUN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428461641767-gi7usgjvd7anritgup8il51nqfd3s8pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
